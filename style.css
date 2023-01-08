@@ -1,13 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Georama&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Georama", sans-serif;
+  transition: all 0.33s;
+}
+
 body {
-  display: flex;
   width: 100%;
+  min-height: 100vh;
   background: black;
-  min-width: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-embed {
-  width: 100%;
+main {
+  width: 50%;
+  max-width: 500px;
   height: auto;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px 0;
+  box-shadow: 0px 0px 1000px 5px blue;
+  animation-delay: 1s;
+}
+
+progress {
+  width: 70%;
+  height: 25px;
+}
+
+div {
+  width: 70%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+p {
+  font-size: 18px;
+  text-align: left;
+}
+
+.left {
+  font-weight: 600;
+}
+
+.remaining-days {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+footer {
+  width: 70%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 15px;
+  color: gray;
+}
+
+a {
+  color: inherit;
+}
+
+@media (width <= 600px) {
+  main {
+    width: 80%;
+  }
+}
+
+@media (width <= 375px) {
+  main {
+    width: 90%;
+  }
 }
