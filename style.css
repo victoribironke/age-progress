@@ -81,6 +81,12 @@ a {
   color: inherit;
 }
 
+@media (width >= 1000px) {
+  main {
+    scale: 1.3;
+  }
+}
+
 @media (width <= 600px) {
   main {
     width: 80%;
