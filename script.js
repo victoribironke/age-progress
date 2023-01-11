@@ -11,11 +11,12 @@ setInterval(() => {
     date.getMonth() == 9 && date.getDate() == 21
       ? date.getFullYear() - 2005
       : date.getFullYear() - 2005 - 1;
+  let suffix = formatSuffix((currentAge + 1).toString());
 
   left.textContent = `${currentAge} years old`;
   remainingDays.textContent = `${
     daysInTheYear - getNumberOfDays(isLeapYear)
-  } days till ${currentAge + 1} years old`;
+  } days till my ${currentAge + 1}${suffix} birthday.`;
 }, 1000);
 
 function getNumberOfDays(leapYear) {
@@ -61,4 +62,16 @@ function getNumberOfDays(leapYear) {
   right.textContent = `${Math.floor((days / daysInTheYear) * 100)}%`;
   progressBar.value = Math.floor((days / daysInTheYear) * 100);
   return days;
+}
+
+function formatSuffix(age) {
+  if (age[1] == "1") {
+    return "st";
+  } else if (age[1] == "2") {
+    return "nd";
+  } else if (age[1] == "3") {
+    return "rd";
+  } else {
+    return "th";
+  }
 }
