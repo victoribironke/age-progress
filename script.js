@@ -1,6 +1,6 @@
 const left = document.querySelector(".left");
 const right = document.querySelector(".right");
-const progressBar = document.querySelector("progress");
+const progressBar = document.querySelector(".progress div");
 const remainingDays = document.querySelector(".remaining-days");
 const date = new Date();
 const daysInTheYear = date.getFullYear() % 4 == 0 ? 366 : 365;
@@ -60,7 +60,8 @@ function getNumberOfDays(leapYear) {
   }
 
   right.textContent = `${Math.floor((days / daysInTheYear) * 100)}%`;
-  progressBar.value = Math.floor((days / daysInTheYear) * 100);
+  progressBar.style.width = `${(days / daysInTheYear) * 100}%`;
+  console.log(progressBar.style.width);
   return days;
 }
 
