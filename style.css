@@ -27,14 +27,14 @@ main {
   justify-content: center;
   flex-direction: column;
   gap: 0.6rem;
-  padding: 2.5rem 0;
+  padding: 2.5rem 1.5rem;
   box-shadow: 0px 0px 1000px 5px blue;
   animation-delay: 1s;
 }
 
 .progress {
   background: hsl(0, 0%, 90%);
-  width: 70%;
+  width: 100%;
   height: auto;
   border-radius: 100px;
   margin-top: 1rem;
@@ -48,7 +48,7 @@ main {
 }
 
 .top {
-  width: 70%;
+  width: 100%;
   height: auto;
   display: flex;
   align-items: center;
@@ -64,6 +64,7 @@ p {
 .remaining-days {
   font-size: 1rem;
   margin-top: 1.25rem;
+  text-align: center;
 }
 
 footer {
@@ -84,6 +85,12 @@ footer p {
 
 a {
   color: inherit;
+}
+
+@media (width >=800) {
+  main {
+    scale: 1.2;
+  }
 }
 
 @media (width >= 1000px) {
