@@ -28,7 +28,7 @@ const calculateAndSetValues = () => {
   const percentage = ((today.getTime() / birthday.getTime()) * 100).toFixed(3);
 
   const currentAge =
-    today.getMonth() == 9 && date.getDate() == 21
+    today.getMonth() == 9 && today.getDate() == 21
       ? today.getFullYear() - 2005
       : today.getFullYear() - 2005 - 1;
   let suffix = formatSuffix((currentAge + 1).toString());
